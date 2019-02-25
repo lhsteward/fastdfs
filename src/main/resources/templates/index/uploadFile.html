@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>上传文件</title>
+<!--layui 框架-->
+<link rel="stylesheet" href="../../static/layui/css/layui.css" th:href="@{~/static/layui/css/layui.css}">
+<style type="text/css">
+	/*表格行高*/
+	.layui-table-cell{
+		height:auto !important;
+	}
+	.layui-table-fixed .layui-table{
+		height:100% !important;
+	}
+	.layui-laypage .layui-laypage-curr .layui-laypage-em{
+		background-color:#0086ed!important;
+	}
+	.layui-form-checked[lay-skin=primary] i{
+		border-color: #0086ed;
+		background-color: #0086ed;
+	}
+
+	.layui-laypage .layui-laypage-curr .layui-laypage-em{
+		background-color:#0086ed!important;
+	}
+	.layui-form-select dl dd.layui-this{
+		background-color:#0086ed!important;
+	}
+
+</style>
+</head>
+<body>
+<div style="padding:10px;">
+	<form class="layui-form" id = "myForm" enctype="multipart/form-data">
+		<div class="layui-upload-drag" id="content" style="width:400px;height: 250px;">
+			<i class="layui-icon"></i>
+			<p>点击上传文件</p>
+			<div id="imgList" style="width:100%;height:100%;">
+			</div>
+		</div>
+		<div class="layui-form-item" style="padding-top: 30px;">
+			<span class="layui-btn layui-btn-normal" id="upload">上传</span>
+		</div>
+	</form>
+</div>
+</body>
+<script src="../../static/jquery/jquery.js" th:src="@{~/static/jquery/jquery.js}"></script>
+<script src="../../static/layui/layui.js" th:src="@{~/static/layui/layui.js}"></script>
+<script type="text/javascript" src="../../static/index/uploadFile.js" th:src="@{~/static/index/uploadFile.js}"></script>
+</html>
